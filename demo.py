@@ -140,7 +140,7 @@ with st.container(border=True):
     with tab4:
         # Loans Amount Distribution
         histo_term = px.histogram(
-            loan,
+            loan_condition,
             x = 'loan_amount',
             nbins=30,
             template='seaborn',
@@ -157,7 +157,7 @@ with st.container(border=True):
     with tab5:
         # Loan Amount Distribution by Purpose
         box_term = px.box(
-            loan,
+            loan_condition,
             x = 'purpose',
             y = 'loan_amount',
             color = 'term',
